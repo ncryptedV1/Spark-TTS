@@ -17,4 +17,4 @@ services:
               device_ids: ['0']
               capabilities: [gpu]
     command: >
-      /bin/bash -c "rm -rf Spark-TTS && git clone https://github.com/ncryptedV1/Spark-TTS.git && cd Spark-TTS/runtime/triton_trtllm && bash run.sh 0 3 offline float16"
+      /bin/bash -c "rm -rf Spark-TTS && git clone https://github.com/ncryptedV1/Spark-TTS.git && cd Spark-TTS/runtime/triton_trtllm && bash run.sh 0 3 offline"
