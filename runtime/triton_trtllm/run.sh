@@ -29,8 +29,7 @@ if [ $stage -le 1 ] && [ $stop_stage -ge 1 ]; then
                 --output_dir $trt_engines_dir \
                 --max_batch_size 16 \
                 --max_num_tokens 32768 \
-                --gemm_plugin $trt_dtype \
-                --context_fmha disable || exit 1
+                --gemm_plugin $trt_dtype || exit 1
 fi
 
 if [ $stage -le 2 ] && [ $stop_stage -ge 2 ]; then
