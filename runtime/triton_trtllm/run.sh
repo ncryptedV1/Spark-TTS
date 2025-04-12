@@ -4,7 +4,7 @@ stage=$1
 stop_stage=$2
 service_type=$3
 trt_dtype=${4:-bfloat16}  # Default to bfloat16 if not provided
-echo "Start stage: $stage, Stop stage: $stop_stage service_type: $service_type"
+echo "Start stage: $stage, Stop stage: $stop_stage service_type: $service_type, trt_dtype: $trt_dtype"
 
 huggingface_model_local_dir=../../pretrained_models/Spark-TTS-0.5B
 trt_weights_dir=./tllm_checkpoint_${trt_dtype}
