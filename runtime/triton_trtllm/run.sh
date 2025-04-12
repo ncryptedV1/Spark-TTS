@@ -3,10 +3,10 @@ export CUDA_VISIBLE_DEVICES=0
 stage=$1
 stop_stage=$2
 service_type=$3
+trt_dtype=${4:-bfloat16}  # Default to bfloat16 if not provided
 echo "Start stage: $stage, Stop stage: $stop_stage service_type: $service_type"
 
 huggingface_model_local_dir=../../pretrained_models/Spark-TTS-0.5B
-trt_dtype=bfloat16
 trt_weights_dir=./tllm_checkpoint_${trt_dtype}
 trt_engines_dir=./trt_engines_${trt_dtype}
 
